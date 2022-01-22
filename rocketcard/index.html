@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocketcard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <div class="card-container">
+      <div id='tooltip-container' class="tooltip">
+        <h2>Compartilhe seu #rocketcard
+          <span id='tooltip-text' class="tooltip-text">Click para copiar</span>
+        </h2>
+      </div>
+      <div class="card-wrapper" id="card-bg">
+        <div class="card">
+          <div class="card-header">
+            <div class="container-logo">
+              <img src="assets/logo.svg" alt="Rocketseat">
+            </div>
+            <span id='username'>saymondamasio</span>
+          </div>
+
+          <div class="card-content">
+            <img class="avatar" id='avatar' src="https://github.com/saymondamasio.png" alt="Saymon Damásio">
+            <div class="info">
+              <ul>
+                <li><img src="assets/followers.svg" alt="Seguidores"> <span id="followers-qnt">713</span>&nbsp;Seguidores</li>
+                <li><img src="assets/following.svg" alt="Seguindo"> <span id="following-qnt">452</span>&nbsp;Seguindo</li>
+                <li><img src="assets/repository.svg" alt="Repositórios"> <span id="repositories-qnt">38</span>&nbsp;Repositórios</li>
+                <li><img src="assets/company.svg" alt="Empresa"> <span id='company'>@Rocketseat</span></li>
+                <li><img src="assets/location.svg" alt="Localização"> <span id='location'>Bebedouro</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <img src="assets/logo.svg" alt="Logo">
+            <span>ROCKETCARD</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-card">
+      <h2>Customizar Rocketcard</h2>
+
+      <button id="generate-bg-btn">Gerar background</button>
+      <button id="download-card-btn">Download</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

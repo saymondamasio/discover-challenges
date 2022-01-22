@@ -1,0 +1,260 @@
+:root {
+  --bg: #000000;
+  --bg-card: #0e1218;
+  --text: #f1f1f1;
+  --img-profile: #8257e5;
+  --buttons: #fff;
+  --border-button: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-card);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Prompt, sans-serif;
+}
+
+main {
+  margin-top: 70px;
+  margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container h2 {
+  margin-bottom: 22px;
+
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text);
+  line-height: 30px;
+}
+
+.card-wrapper {
+  border-radius: 50px;
+  width: 440px;
+  height: 690px;
+  padding: 24px 15px;
+  background-color: var(--bg);
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border-radius: 50px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.card-header .container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #f1f1f1;
+}
+
+.card-header .container-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.card-header span {
+  margin-left: 20px;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--text);
+}
+
+.card-content {
+  height: 100%;
+}
+
+.card-content .avatar {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  position: absolute;
+  top: 134px;
+  left: 90px;
+  border: 10px solid var(--img-profile);
+}
+
+.card-content .info {
+  position: absolute;
+  bottom: 95px;
+  left: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 195px;
+  background: linear-gradient(
+    180deg,
+    #000000 3.65%,
+    rgba(70, 69, 69, 0.72) 53.65%,
+    rgba(62, 56, 56, 0.42) 100%
+  );
+  border-radius: 50px;
+  padding: 30px 20px;
+}
+
+.card-content .info ul {
+  list-style-type: none;
+}
+
+.card-content .info ul li {
+  font-family: Prompt;
+  font-size: 16px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.card-content .info ul li:not(:first-child) {
+  margin-top: 10px;
+}
+
+.card-content .info ul li img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.card-footer {
+  margin-top: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card-footer img {
+  width: 27px;
+}
+
+.card-footer span {
+  margin-left: 10px;
+
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #ffffff;
+}
+
+.custom-card {
+  margin-left: 150px;
+}
+
+.custom-card h2 {
+  margin-bottom: 33px;
+
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #ffffff;
+}
+
+.custom-card button {
+  width: 230px;
+  height: 60px;
+
+  font-size: 15px;
+  line-height: 23px;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  color: var(--text);
+
+  background: var(--bg);
+  border: 2px solid var(--border-button);
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.custom-card button:hover {
+  transform: scale(1.05);
+}
+
+.custom-card button:not(:first-child) {
+  margin-top: 10px;
+}
+
+/* Tooltip starts */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: #555;
+  width: 150px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  font-size: 16px;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tooltip ends */

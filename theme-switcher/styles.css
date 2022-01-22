@@ -1,0 +1,100 @@
+:root {
+  --dark: #292c35;
+  --light: #f1f1f1;
+  --label: #111;
+}
+
+.dark-theme {
+  --bg-color: var(--dark);
+  --text-color: var(--light);
+}
+
+.light-theme {
+  --bg-color: var(--light);
+  --text-color: var(--dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 400px;
+}
+
+.container-switcher {
+  display: flex;
+  justify-content: center;
+}
+
+.container-switcher img {
+  width: 75px;
+  height: 75px;
+}
+
+.container-switcher label {
+  width: 250px;
+  height: 100px;
+
+  padding: 15px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--label);
+  border-radius: 59px;
+
+  cursor: pointer;
+}
+
+.container-switcher input[type="checkbox"] {
+  display: none;
+}
+
+.container-switcher label .switcher {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: left 0.3s ease-out;
+  left: 15px;
+}
+
+.container-switcher input[type="checkbox"]:checked + label .switcher {
+  left: calc(100% - 90px);
+}
+
+main p {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* @media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #333;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #fff;
+  }
+} */

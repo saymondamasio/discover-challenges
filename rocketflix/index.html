@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <img src="assets/shuffle.svg" alt="Logo" />
+        <h2>Não sabe o que assistir?</h2>
+      </header>
+
+      <main>
+        <section id="session-movie" class="hidden">
+          <img id="poster-movie" src="" alt="" />
+          <div>
+            <h2 id="title-movie"></h2>
+            <p id="description-movie"></p>
+          </div>
+        </section>
+
+        <section id="session-fallback" class="fallback hidden">
+          <img src="assets/fallback-image.png" alt="Computador em uma mesa" />
+          <div>
+            <p>Ops, hoje não é dia de assistir filme. Bora codar! 🚀</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <button id="next-movie-btn" type="button">
+          <img src="assets/shuffle.svg" alt="Logo" /> Encontrar filme
+        </button>
+
+        <p>
+          Clique em "Encontrar filme" que traremos informações de algum filme
+          para você assistir hoje.
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

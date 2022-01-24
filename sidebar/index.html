@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="sidebar" class="sidebar">
+        <header>
+          <img class="logo" src="images/logo.svg" alt="Logo" />
+          <button id="toggle-menu">
+            <img src="images/menu.svg" alt="Menu" />
+          </button>
+        </header>
+
+        <div class="search">
+          <img src="images/search.svg" alt="Buscar" />
+          <input type="text" placeholder="Buscar" />
+        </div>
+
+        <ul class="menu">
+          <li>
+            <img src="images/grid.svg" alt="Dashboard" /> <span>Dashboard</span>
+          </li>
+          <li><img src="images/pet.svg" alt="Pets" /> <span>Pets</span></li>
+          <li>
+            <img src="images/user.svg" alt="Clients" /> <span>Clientes</span>
+          </li>
+          <li><img src="images/vet.svg" alt="Vets" /> <span>Vets</span></li>
+          <li>
+            <img src="images/settings.svg" alt="Settings" />
+            <span>Ajustes</span>
+          </li>
+        </ul>
+
+        <footer>
+          <img class="avatar" src="images/photo.jpg" alt="Usuário" />
+          <div class="info-user">
+            <span class="name">Eleanor Pena</span>
+            <span class="job">Veterinária</span>
+          </div>
+
+          <button class="btn-out">
+            <img src="images/log-out.svg" alt="Sair" />
+          </button>
+        </footer>
+      </div>
+      <main>
+        <h1>Dashboard</h1>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

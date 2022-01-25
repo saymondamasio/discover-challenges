@@ -6,4 +6,5 @@
 * [Recipe Page](https://saymondamasio.github.io/discover-challenges/recipe-page/index.html)
 * [RocketNews](https://saymondamasio.github.io/discover-challenges/rocketnews/index.html)
 * [Sidebar](https://saymondamasio.github.io/discover-challenges/sidebar/index.html)
+* [RocketShoes](https://saymondamasio.github.io/discover-challenges/rocketshoes/index.html)
 

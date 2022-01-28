@@ -1,0 +1,312 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  font-family: Roboto, sans-serif;
+
+  height: 100vh;
+}
+
+h1 {
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.container main {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px;
+}
+
+.container main .logo {
+  width: 115px;
+  height: 28px;
+}
+
+.container .image-background {
+  flex: 1 1 50%;
+}
+
+.container .image-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container main .wrapper-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.wrapper-content .content {
+  max-width: 570px;
+  width: 100%;
+  background-color: var(--form-background);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+
+  border-radius: 4px;
+}
+
+form {
+  width: 334px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  .container .image-background {
+    display: none;
+  }
+
+  .wrapper-content {
+    width: 100%;
+    max-width: initial;
+  }
+  .wrapper-content .content {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  form {
+    width: 100%;
+  }
+  .container main {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper-content {
+    align-items: flex-start !important;
+    margin-top: 30px;
+  }
+}
+
+form header {
+  margin-bottom: 27px;
+  width: 100%;
+}
+
+form header h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: var(--text-title);
+}
+
+form header h1 img {
+  margin-right: 10px;
+}
+
+form header p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  color: var(--text-base);
+}
+
+.wrapper-input:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.wrapper-input {
+  width: 100%;
+}
+
+.wrapper-input label {
+  display: block;
+
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: var(--text-base);
+}
+
+.wrapper-input input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #868686;
+  background: transparent;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #a9afb9;
+
+  padding: 12px;
+  padding-left: 40px;
+
+  border-radius: 4px;
+}
+
+.wrapper-input input::placeholder {
+  color: #a9afb9;
+}
+
+.wrapper-input input:focus {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 0px 2px #ffde88;
+}
+
+.wrapper-input input[name="email"] {
+  background: url("images/mail.svg") no-repeat 10px center;
+}
+
+.wrapper-input input[name="email"]:focus {
+  background: url("images/mail-focus.svg") no-repeat 10px center, transparent;
+}
+
+.wrapper-input input[name="password"] {
+  background: url("images/lock.svg") no-repeat 10px center;
+}
+
+.wrapper-input input[name="password"]:focus {
+  background: url("images/lock-focus.svg") no-repeat 10px center, transparent;
+}
+
+form .options {
+  margin-top: 20px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form .options label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-left: 35px;
+
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #a9afb9;
+}
+
+form .options label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+form .options label .check-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+
+  border: 1px solid #868686;
+  border-radius: 4px;
+
+  transition: 0.2s;
+}
+
+form .options input:focus + .check-mark {
+  border: 1px solid var(--primary-color);
+}
+
+form .options label input[type="checkbox"]:checked ~ .check-mark {
+  background: url("images/check.svg") no-repeat center, var(--primary-color);
+}
+
+form a {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-decoration: none;
+
+  color: var(--primary-color);
+}
+
+form button[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: none;
+
+  margin-top: 20px;
+
+  cursor: pointer;
+
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+
+  color: #473404;
+
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+form .not-account {
+  margin-top: 15px;
+
+  font-family: Poppins;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: var(--primary-color);
+}
+
+::-ms-reveal {
+  filter: invert(100%);
+}
